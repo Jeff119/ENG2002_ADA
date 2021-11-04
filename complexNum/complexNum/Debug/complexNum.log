@@ -1,4 +1,4 @@
 ﻿  Source.cpp
-C:\Users\jefff\OneDrive\Desktop\ENG2002_ADA\complexNum\complexNum\Source.cpp(22,9): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-C:\Users\jefff\OneDrive\Desktop\ENG2002_ADA\complexNum\complexNum\Source.cpp(25,9): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-  complexNum.vcxproj -> C:\Users\jefff\OneDrive\Desktop\ENG2002_ADA\complexNum\Debug\complexNum.lib
+C:\Users\Jeff\Documents\ENG2002_ADA\complexNum\complexNum\Source.cpp(24,9): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\Users\Jeff\Documents\ENG2002_ADA\complexNum\complexNum\Source.cpp(28,9): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  complexNum.vcxproj -> C:\Users\Jeff\Documents\ENG2002_ADA\complexNum\Debug\complexNum.lib
