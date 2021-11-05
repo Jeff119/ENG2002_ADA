@@ -16,7 +16,7 @@ int main() {
 			cout << "Wrong input! Please enter again: ";
 			cin >> x1 >> y1;
 		}
-	} while (x1 == 0 || y1 == 0); //loop break if x1, y2 not equal to 0
+	} while (x1 == 0 || y1 == 0); //loop break if x1, y1 not equal to 0
 	complexNum c1(x1, y1);
 	if (c1.GetImNum() < 0) //if imaginary part is negative 
 		cout << "The first complex number is " << c1.GetReNum() << c1.GetImNum() << "i. " << endl; //print out the negative sign
@@ -33,12 +33,12 @@ int main() {
 			cout << "Wrong input! Please enter again: ";
 			cin >> x2 >> y2;
 		}
-	} while (x2 == 0 || y2 == 0); //loop break if x1, y2 not equal to 0
+	} while (x2 == 0 || y2 == 0); //loop break if x2, y2 not equal to 0
 	complexNum c2(x2, y2);
 	if (c2.GetImNum() < 0) //if imaginary part is negative 
-		cout << "The first complex number is " << c2.GetReNum() << c2.GetImNum() << "i. " << endl; //print out the negative sign
+		cout << "The second complex number is " << c2.GetReNum() << c2.GetImNum() << "i. " << endl; //print out the negative sign
 	else
-		cout << "The first complex number is " << c2.GetReNum() << "+" << c2.GetImNum() << "i. " << endl; //print out the positive sign
+		cout << "The second complex number is " << c2.GetReNum() << "+" << c2.GetImNum() << "i. " << endl; //print out the positive sign
 	
 	//Division of 2 complex number
 	double x3 = 0, y3 = 0; //declare and initalize for c3 
