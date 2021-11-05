@@ -9,12 +9,11 @@ public:
 	double GetImNum();
 	bool ReaderrNum();
 	bool checkVaild();
-	void print() const;
-	void division(complexNum obj, complexNum obj1);
+	complexNum division(complexNum obj, complexNum obj1);
 
 
 private:
-	double x = 0.0; //real part
-	double y = 0.0; //imaginary part 
+	double x ; //real part
+	double y ; //imaginary part 
 	bool errNum = false;
 };
