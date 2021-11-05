@@ -1,33 +1,62 @@
+#include <iostream>
 #include "complexvalue.h"
 
-
-complexNum::complexNum()
+//constructor 
+complexNum::complexNum(double r, double i)
 {
-	ReNum = 0;
-	ImNum = 0;
-	errNum = false;
+	x = r;
+	y = i;
 }
 
+//destructor 
 complexNum::~complexNum()
 {
 }
 
-void complexNum::SetReNum(double RNum) {
-	ReNum = RNum;
+
+//change the real part only
+void complexNum::SetReNum(double Re) {
+	x = Re;
 }
 
-void complexNum::SetImNum(double INum) {
-	ImNum = INum;
+
+//change the imaginary part only
+void complexNum::SetImNum(double Im) {
+	y = Im;
 }
 
-int complexNum::GetReNum() {
-	return ReNum;
+//Get the value of real part
+double complexNum::GetReNum() {
+	return x;
 }
 
-int complexNum::GetImNum() {
-	return ImNum;
+//Get the value of imaginary part
+double complexNum::GetImNum() {
+	return y;
 }
 
-bool GeterrNum() {
-	return true;
+//real value of errNum
+bool complexNum::ReaderrNum() {
+	return errNum;
+}
+
+//check the operand 
+bool complexNum::checkVaild() {
+	if (x == 0 || y == 0) {
+		errNum = true; // change the value of errNum
+		return errNum;
+	}
+	else
+		return errNum;
+}
+
+//print the complex number
+void complexNum::print() const {
+	std::cout << x << " + " << y << "i" << std::endl;
+}
+
+// division of 2 objects of complex number 
+void complexNum::division(complexNum obj, complexNum obj1) {
+	x = (obj.x * obj1.x + obj.y * obj1.y) / (obj1.x * obj1.x + obj1.y * obj1.y);
+	y = (obj.y * obj1.x - obj.x * obj1.y) / (obj1.x * obj1.x + obj1.y * obj1.y);
 }
