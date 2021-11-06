@@ -9,7 +9,8 @@ public:
 	double GetImNum();
 	bool ReaderrNum();
 	bool checkVaild();
-	complexNum division(complexNum obj, complexNum obj1);
+	complexNum division(complexNum obj, complexNum obj1); 
+
 
 
 private:

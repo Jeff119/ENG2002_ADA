@@ -41,7 +41,7 @@ bool complexNum::ReaderrNum() {
 
 //check the operand 
 bool complexNum::checkVaild() {
-	if (x == 0 || y == 0) {
+	if (x == 0 && y == 0) {
 		errNum = true; // change the value of errNum
 		return errNum;
 	}
@@ -50,9 +50,10 @@ bool complexNum::checkVaild() {
 }
 
 // division of 2 objects of complex number 
-complexNum complexNum::division(complexNum obj, complexNum obj1) {
-	x = (obj.x * obj1.x + obj.y * obj1.y) / (obj1.x * obj1.x + obj1.y * obj1.y);
-	y = (obj.y * obj1.x - obj.x * obj1.y) / (obj1.x * obj1.x + obj1.y * obj1.y);
+complexNum complexNum::division(complexNum obj, complexNum obj1)  {
+	x = (obj.x * obj1.x + obj.y * obj1.y) / (obj1.x * obj1.x + obj1.y * obj1.y); //real
+	y = (obj.y * obj1.x - obj.x * obj1.y) / (obj1.x * obj1.x + obj1.y * obj1.y); //imaginary
 	complexNum div(x, y);
 	return div;
 }
+
