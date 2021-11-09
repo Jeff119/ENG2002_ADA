@@ -10,8 +10,7 @@ public:
 	bool ReaderrNum();
 	bool checkVaild();
 	complexNum division(complexNum obj, complexNum obj1); 
-
-
+	complexNum squareroot(complexNum);
 
 private:
 	double x ; //real part

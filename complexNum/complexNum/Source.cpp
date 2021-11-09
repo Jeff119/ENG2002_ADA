@@ -1,4 +1,5 @@
 #include "complexvalue.h"
+#include <math.h>
 
 //constructor 
 complexNum::complexNum(double r = 0.0, double i = 0.0)
@@ -51,9 +52,24 @@ bool complexNum::checkVaild() {
 
 // division of 2 objects of complex number 
 complexNum complexNum::division(complexNum obj, complexNum obj1)  {
-	x = (obj.x * obj1.x + obj.y * obj1.y) / (obj1.x * obj1.x + obj1.y * obj1.y); //real
-	y = (obj.y * obj1.x - obj.x * obj1.y) / (obj1.x * obj1.x + obj1.y * obj1.y); //imaginary
-	complexNum div(x, y);
+	x = ((obj.x * obj1.x) + (obj.y * obj1.y)) / ((obj1.x * obj1.x) + (obj1.y * obj1.y)); //real
+	y = ((obj.y * obj1.x) - (obj.x * obj1.y)) / ((obj1.x * obj1.x) + (obj1.y * obj1.y)); //imaginary
+	complexNum div(x, y); //store the division result 
 	return div;
 }
 
+//square root of the complex number
+complexNum complexNum::squareroot(complexNum obj){
+	int sign; //store the value for the sign
+	if (obj.y > 0)
+		sign = -1;
+	if (obj.y < 0)
+		sign = 1;
+	if (obj.y == 0)
+		sign = 0;
+
+	x = sqrt((obj.x + sqrt(obj.x * obj.x + obj.y * obj.y)) / 2);
+	y = sign * sqrt(((-1 * obj.x) + sqrt(obj.x * obj.x + obj.y * obj.y)) / 2);
+	complexNum sroot(x, y); // store the result 
+	return sroot;
+}

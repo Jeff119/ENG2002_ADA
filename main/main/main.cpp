@@ -42,12 +42,24 @@ int main() {
 	
 
 	//Division of 2 complex number
-	complexNum c3(0, 0); //inital object to use the function
-	complexNum c4 = c3.division(c1, c2);
+	complexNum div(0, 0); //inital object to use the function
+	complexNum c4 = div.division(c1, c2);
 	if (c4.GetImNum() < 0)
-		cout << "The division result is " << c4.GetReNum() << c4.GetImNum() << "i." << endl;
-	else
-		cout << "The division result is " << c4.GetReNum() << "+" << c4.GetImNum() << "i." << endl;
+		cout << "The division result is " << c4.GetReNum() << c4.GetImNum() << "i." << endl; //print out the negative sign
+	if (c4.GetImNum() > 0)
+		cout << "The division result is " << c4.GetReNum() << "+" << c4.GetImNum() << "i." << endl; //print out the positive sign 
+	if (c4.GetImNum() == 0)
+		cout << "The division result is " << c4.GetReNum() << ". " << endl; // when 2 complex number is the same 
+
+	//the square root of the first complex number 
+	complexNum sroot(0,0); //inital object to use the function
+	complexNum srresult = sroot.squareroot(c1); // store the result of the comeplex number
+	cout << "The square root of the first complex number is " << srresult.GetReNum() << srresult.GetImNum() << "i. " << endl;
+
+	//the square root of the second complex number 
+	complexNum sroot1(0, 0); //inital object to use the function
+	complexNum srresult1 = sroot1.squareroot(c2); // store the result of the comeplex number
+	cout << "The square root of the second complex number is " << srresult.GetReNum() << srresult.GetImNum() << "i. " << endl;
 	return 0;
 	
 }
