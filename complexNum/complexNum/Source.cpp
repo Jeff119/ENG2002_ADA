@@ -2,10 +2,12 @@
 #include <math.h>
 
 //constructor 
-complexNum::complexNum(double r = 0.0, double i = 0.0)
-{
-	x = r; //initialization 
+complexNum::complexNum(double r = 0.0, double i = 0.0){
+	//initialization 
+	x = r; 
 	y = i;
+	errNum = false;
+	sign = 1;
 }
 
 //destructor 
@@ -60,7 +62,8 @@ complexNum complexNum::division(complexNum obj, complexNum obj1)  {
 
 //square root of the complex number
 complexNum complexNum::squareroot(complexNum obj){
-	int sign; //store the value for the sign
+
+	//check the sign 
 	if (obj.y > 0)
 		sign = -1;
 	if (obj.y < 0)
@@ -68,8 +71,9 @@ complexNum complexNum::squareroot(complexNum obj){
 	if (obj.y == 0)
 		sign = 0;
 
-	x = sqrt((obj.x + sqrt(obj.x * obj.x + obj.y * obj.y)) / 2);
-	y = sign * sqrt(((-1 * obj.x) + sqrt(obj.x * obj.x + obj.y * obj.y)) / 2);
+	//calculation of square root of complex number
+	x = sqrt((obj.x + sqrt(obj.x * obj.x + obj.y * obj.y)) / 2); //real 
+	y = sign * sqrt(((-1 * obj.x) + sqrt(obj.x * obj.x + obj.y * obj.y)) / 2); //
 	complexNum sroot(x, y); // store the result 
 	return sroot;
 }

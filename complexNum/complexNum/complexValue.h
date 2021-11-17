@@ -15,5 +15,6 @@ public:
 private:
 	double x ; //real part
 	double y ; //imaginary part 
-	bool errNum = false;
+	bool errNum; 
+	int sign; //store the value for the sign;
 };
