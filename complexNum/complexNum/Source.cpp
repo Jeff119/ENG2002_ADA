@@ -7,7 +7,6 @@ complexNum::complexNum(double r = 0.0, double i = 0.0){
 	x = r; 
 	y = i;
 	errNum = false;
-	sign = 1;
 }
 
 //destructor 
@@ -17,14 +16,14 @@ complexNum::~complexNum()
 
 
 //change the real part only
-void complexNum::SetReNum(double Re) {
-	x = Re;
+void complexNum::SetReNum(double r) {
+	x = r;
 }
 
 
 //change the imaginary part only
-void complexNum::SetImNum(double Im) {
-	y = Im;
+void complexNum::SetImNum(double i) {
+	y = i;
 }
 
 //Get the value of real part
@@ -37,7 +36,7 @@ double complexNum::GetImNum() {
 	return y;
 }
 
-//real value of errNum
+//read the value of errNum
 bool complexNum::ReaderrNum() {
 	return errNum;
 }
@@ -62,7 +61,7 @@ complexNum complexNum::division(complexNum obj, complexNum obj1)  {
 
 //square root of the complex number
 complexNum complexNum::squareroot(complexNum obj){
-
+	int sign; //store the value for the sign;
 	//check the sign 
 	if (obj.y > 0)
 		sign = -1;
