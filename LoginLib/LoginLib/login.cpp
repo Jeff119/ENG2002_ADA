@@ -68,7 +68,7 @@ bool Login::find(char* name) {
 
 //add the data to the file
 void Login::add(char* name, char* pass) {
-	pUser = new User(name, pass); //create 
+	pUser = new User(name, pass); //create a user 
 }
 
 //check the password in the file
