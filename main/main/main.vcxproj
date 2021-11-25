@@ -140,9 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Library Include="complexNum.lib" />
+    <Library Include="LoginLib.lib" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="complexValue.h" />
+    <ClInclude Include="Login.h" />
+    <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

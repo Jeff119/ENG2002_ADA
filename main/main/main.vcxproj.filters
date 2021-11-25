@@ -16,9 +16,16 @@
   </ItemGroup>
   <ItemGroup>
     <Library Include="complexNum.lib" />
+    <Library Include="LoginLib.lib" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="complexValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Login.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
