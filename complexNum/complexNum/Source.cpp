@@ -70,7 +70,6 @@ complexNum complexNum::squareroot(complexNum obj){
 	if (obj.y > 0)
 		sgn = 1;
 
-
 	//calculation of square root of complex number
 	x = sqrt((obj.x + sqrt(obj.x * obj.x + obj.y * obj.y)) / 2); //real 
 	y = sgn * sqrt(((-1 * obj.x) + sqrt(obj.x * obj.x + obj.y * obj.y)) / 2); //imaginary

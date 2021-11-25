@@ -72,14 +72,18 @@ void Login::add(char* name, char* pass) {
 }
 
 //check the password in the file
-bool Login::check(char* pass) {
+bool Login::check(char* name, char* pass) {
 	ifstream file("password.txt");
+	char checkName[50]; //declare a char array for checking user
 	char checkPass[50]; //declare a char array for checking password
 	while (true) {
-		file.getline(checkPass, 50);
-		if (strcmp(pass, checkPass) == 0) {
-			file.close();
-			return true;
+		file.getline(checkName, 50); //search the user name
+		if (strcmp(name, checkName) == 0) { //match the user name
+			file.getline(checkPass, 50);  //get the password from the file
+			if (strcmp(pass, checkPass) == 0) {
+				file.close();
+				return true;
+			}
 		}
 		if (file.fail()) //stop the search 
 			break;
