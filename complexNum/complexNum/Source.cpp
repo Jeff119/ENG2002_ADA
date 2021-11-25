@@ -2,7 +2,7 @@
 #include <math.h>
 
 //constructor 
-complexNum::complexNum(double r = 0.0, double i = 0.0){
+complexNum::complexNum(double r, double i){
 	//initialization 
 	x = r; 
 	y = i;
