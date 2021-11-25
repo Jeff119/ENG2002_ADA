@@ -109,7 +109,7 @@ int loginManager() {
 			login.add(uName, uPass); //add the user name and password
 			login.write(); //write the data to the file
 			cout << "Created sucessfully! " << endl;
-			cout << "Welcome " << uName << endl;
+			cout << "Welcome " << uName << "!. " << endl;
 		}
 	}
 	else {
