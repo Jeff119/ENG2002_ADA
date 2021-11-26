@@ -139,7 +139,14 @@ void ComplexNumdisvision() {
 void ComplexNumSR() {
 	double x, y; 
 	cout << "Please enter the complex number(real, imaginary): ";
-	cin >> x >> y;
+	do { // check the input value
+		cin >> x >> y;
+		complexNum c(x, y);
+		c.checkVaild(); //check the operand 
+		if (c.ReaderrNum()) {
+			cout << "This complex number cannot be 0! Please enter again: ";
+		}
+	} while (x == 0 && y == 0);
 	complexNum c(x, y);
 	complexNum SRresult = SRresult.squareroot(c);
 	cout << "The result is ";
