@@ -59,7 +59,10 @@ bool trylogin() {
 				break; //stop the loop
 			}
 			else {
-				cout << attempt << " attempt left! " << endl; //tell the user how many attempts left
+				if (attempt > 1)
+					cout << attempt << " attempts left! " << endl; //tell the user how many attempts left
+				if (attempt == 1)
+					cout << attempt << " attempt left! " << endl;
 				if (attempt == 0) { //end the loop when no attempt
 					cout << "No attempt left! The program will end. " << endl;
 					return false; 
